@@ -1,0 +1,23 @@
+[Unit]
+Description=YINK visitor and administration backend
+After=network.target
+
+[Service]
+User=yink
+Group=yink
+WorkingDirectory=/opt/yink/server
+Environment=YINK_DATA=/var/lib/yink
+Environment=YINK_ORIGIN=https://leekquant.tech
+ExecStart=/usr/bin/gunicorn --bind 127.0.0.1:8766 --workers 2 --threads 4 --timeout 25 --max-requests 2000 --max-requests-jitter 200 app:application
+Restart=on-failure
+RestartSec=3
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/yink
+MemoryMax=350M
+
+[Install]
+WantedBy=multi-user.target

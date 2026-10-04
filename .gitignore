@@ -1,0 +1,44 @@
+# Runtime state and credentials
+.env
+.env.*
+!.env.example
+server/data/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+setup-token
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+
+# Build artifacts and disposable tests
+dist/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+tests/backend-sandbox/
+tests/ui-update-*/
+tests/admin-update-*/
+
+# Local design experiments and private deployment history
+design/
+previews/
+deploy/VERIFICATION.md
+deploy/prepare.sh
+deploy/switch.sh
+tools/build-real-web-showcase.py
+tools/build-creative-web-showcase.py
+
+# Editor and OS files
+.codex/
+.agents/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

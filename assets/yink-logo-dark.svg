@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="38 35 522 184" role="img" aria-labelledby="title desc">
+  <title id="title">盈刻 YINK</title>
+  <desc id="desc">上行一笔：行情线穿过刻痕 Y，在高点收束。</desc>
+  <path d="M53 56 125 128 197 56" fill="none" stroke="#f0e8dc" stroke-width="24" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M125 128v73" stroke="#f0e8dc" stroke-width="24" stroke-linecap="square"/>
+  <path d="m77 153 32-33 19 17 42-48 21-16" fill="none" stroke="#e6975b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="191" cy="73" r="8" fill="#e6975b"/>
+  <path d="M61 183h31" stroke="#f0e8dc" stroke-width="4" stroke-linecap="square"/>
+  <text x="254" y="135" fill="#f0e8dc" font-family="Georgia,'Microsoft YaHei',serif" font-size="62" letter-spacing="5">盈刻</text>
+  <text x="257" y="185" fill="#e6975b" font-family="Georgia,serif" font-size="31" font-style="italic" letter-spacing="10">YINK</text>
+  <path d="M256 200h292" stroke="#5d5148" stroke-width="2"/>
+</svg>

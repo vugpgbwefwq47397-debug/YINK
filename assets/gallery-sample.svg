@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1250" viewBox="0 0 1000 1250" role="img" aria-labelledby="title description">
+  <title id="title">盈刻 Gallery 海报效果示意</title>
+  <desc id="description">使用项目自带示例 CSV 的三根日 K，展示一次从 213 到 216 的模拟交易，收益率为 1.41%。</desc>
+  <rect width="1000" height="1250" fill="#f5f2e9"/>
+  <g fill="#797c75" font-family="Arial, sans-serif" font-size="18" letter-spacing="3">
+    <text x="75" y="55">YINK / TRADE ARCHIVE</text>
+    <text x="925" y="55" text-anchor="end">NO. 001</text>
+    <text x="76" y="140">A SINGLE TRADE, PRESERVED.</text>
+    <text x="80" y="455" font-size="25">LOCAL CSV DEMO</text>
+    <text x="75" y="863">ENTRY / EXIT</text>
+    <text x="75" y="969">2026-09-01 — 2026-09-03</text>
+    <text x="925" y="969" text-anchor="end">2 DAYS HELD</text>
+    <text x="75" y="1216">TURN YOUR TRADES INTO ART.</text>
+    <text x="925" y="1216" text-anchor="end">SAMPLE DATA</text>
+  </g>
+  <g stroke="#c9c9be" stroke-width="1" fill="none">
+    <path d="M75 73H925M75 830H925M75 1183H925"/>
+    <path d="M75 794H925"/>
+  </g>
+  <g font-family="Georgia, 'Songti SC', serif">
+    <text x="72" y="310" fill="#a75037" font-size="164">+1.41%</text>
+    <text x="76" y="405" fill="#242724" font-size="95">SAMPLE</text>
+    <text x="75" y="924" fill="#242724" font-size="52">213.00  →  216.00</text>
+    <text x="75" y="1130" fill="#242724" font-size="27">“A SINGLE TRADE, PRESERVED.”</text>
+  </g>
+  <g stroke="#797c75" stroke-width="2" opacity=".65">
+    <path d="M95 528V742M500 559V696M905 528V650"/>
+  </g>
+  <g fill="#242724">
+    <rect x="91" y="666" width="8" height="46"/>
+    <rect x="496" y="589" width="8" height="77"/>
+    <rect x="901" y="589" width="8" height="31"/>
+  </g>
+  <path d="M95 666L500 589L905 620" fill="none" stroke="#a75037" stroke-width="3"/>
+  <g fill="#a75037" font-family="Arial, sans-serif" font-weight="700" font-size="16">
+    <circle cx="95" cy="666" r="7"/>
+    <circle cx="905" cy="620" r="7"/>
+    <text x="95" y="641">BUY</text>
+    <text x="905" y="595" text-anchor="end">SELL</text>
+  </g>
+</svg>

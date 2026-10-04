@@ -1,0 +1,49 @@
+.studio-section,.poster-section{border:1px solid var(--line);background:var(--white);padding:34px 42px 42px;margin-bottom:28px}
+.studio-header{display:flex;justify-content:space-between;align-items:end;gap:20px;padding:28px 0 22px}
+.studio-header h2,.poster-controls h2{font:normal calc(36px * var(--font-scale, 1)) Georgia,"Songti SC",serif;margin:9px 0}
+.studio-header p,.poster-controls>p{font-size:calc(12px * var(--font-scale, 1));color:var(--muted);line-height:1.7;margin:0}
+.chart-tools{display:flex;gap:7px;white-space:nowrap}
+.chart-tools button,.mark-row button{border:1px solid var(--line);background:transparent;color:var(--ink);padding:10px 14px;min-width:40px}
+.chart-tools button:hover,.mark-row button:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
+.chart-frame{border:1px solid var(--line);width:100%;height:430px;overflow:hidden}
+#chart-canvas{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}
+.chart-hover{margin:0;min-height:42px;padding:13px 2px;border-bottom:1px solid var(--line);font-size:calc(12px * var(--font-scale, 1));font-variant-numeric:tabular-nums;color:var(--muted)}
+.mark-row{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:19px 0;border-bottom:1px solid var(--line)}
+.mark-row p{font-size:calc(13px * var(--font-scale, 1));font-weight:700;margin:0}
+.mark-row>div{display:flex;gap:8px}
+.trade-fields{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.trade-fields input{width:100%}
+.trade-fields small{display:block;margin-top:9px;font-size:calc(11px * var(--font-scale, 1));color:var(--muted)}
+.trade-ledger{margin-top:22px;padding:18px 20px;border:1px solid var(--line);background:#fbfaf6}
+.trade-ledger-title{display:flex;justify-content:space-between;gap:12px;font-size:calc(12px * var(--font-scale, 1))}
+.trade-ledger-title span{color:var(--muted)}
+.trade-events{display:grid;gap:7px;margin-top:13px}
+.trade-event-row{display:grid;grid-template-columns:minmax(125px,1fr) minmax(110px,150px) minmax(110px,150px) 62px;align-items:end;gap:9px;padding:9px 0;border-top:1px solid var(--line)}
+.trade-event-row strong{display:block;font-size:calc(12px * var(--font-scale, 1))}.trade-event-row small{display:block;margin-top:3px;font-size:calc(11px * var(--font-scale, 1));color:var(--muted)}
+.trade-event-row label{font-size:calc(10px * var(--font-scale, 1));color:var(--muted)}.trade-event-row input{display:block;width:100%;margin-top:4px;min-height:35px;padding:5px 7px;border:1px solid var(--line);background:white;color:var(--ink)}
+.trade-event-row button{min-height:35px;border:1px solid var(--line);background:white;color:var(--ink);font-size:calc(11px * var(--font-scale, 1))}
+.trade-event-status{min-height:15px;margin:8px 0 0;color:#a33f32;font-size:calc(11px * var(--font-scale, 1))}
+.trade-ledger .hint{margin:13px 0 0;font-size:calc(11px * var(--font-scale, 1));line-height:1.6;color:var(--muted)}
+.trade-result{margin-top:30px;padding:21px 23px;background:#f1eee5;border-left:3px solid var(--accent);font-size:calc(15px * var(--font-scale, 1));line-height:1.8;font-variant-numeric:tabular-nums}
+.trade-result strong{font:normal calc(34px * var(--font-scale, 1)) Georgia,serif;color:var(--accent);margin-right:20px}
+.trade-result .subresult{display:block;font-size:calc(12px * var(--font-scale, 1));color:var(--muted);margin-top:3px}
+.session-save-status{min-height:16px;margin:7px 0 0;font-size:calc(11px * var(--font-scale, 1));color:#a33f32}
+.poster-grid{display:grid;grid-template-columns:minmax(270px,340px) minmax(0,1fr);gap:55px;padding-top:32px}
+.poster-controls h2{margin-top:0}
+.template-buttons{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:30px 0}
+.template-buttons button{background:transparent;border:1px solid var(--line);color:var(--ink);padding:17px 18px;text-align:left;line-height:1.8}
+.template-buttons button.active{border-color:var(--accent);background:#f3ede2}
+.template-buttons strong{font:normal calc(23px * var(--font-scale, 1)) Georgia,serif}
+.poster-controls select,.poster-controls>input{display:block;width:100%;min-height:46px;margin-bottom:25px;background:transparent;border:1px solid var(--line);padding:0 12px;color:var(--ink);font:inherit}
+.poster-checks{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin:24px 0 28px}
+.poster-checks label{display:flex;align-items:center;gap:9px;font-size:calc(12px * var(--font-scale, 1));font-weight:normal;letter-spacing:0;margin:0;white-space:nowrap}
+.poster-checks input{min-height:auto;margin:0;accent-color:var(--accent)}
+.export-actions{display:grid;gap:9px;margin-top:30px}
+.export-actions button{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:15px 16px;border:1px solid var(--ink);background:var(--ink);color:white;text-align:left;font-size:calc(12px * var(--font-scale, 1))}
+.export-actions button+button{background:transparent;color:var(--ink)}
+.export-actions button:disabled{opacity:.55}
+.export-actions small{font-size:calc(10px * var(--font-scale, 1));color:inherit;opacity:.7}
+.poster-preview{display:flex;justify-content:center;align-items:start;background:#e8e6de;padding:32px;min-width:0}
+#poster-canvas{display:block;width:min(100%,420px);height:auto;box-shadow:0 14px 35px rgba(25,25,22,.2)}
+@media(max-width:850px){.poster-grid{grid-template-columns:1fr;gap:28px}.poster-preview{padding:25px}.poster-controls{max-width:none}}
+@media(max-width:680px){.studio-section,.poster-section{padding:22px 18px}.studio-header{display:block}.chart-tools{margin-top:17px}.chart-frame{height:350px}.mark-row{align-items:start;flex-direction:column}.trade-fields{grid-template-columns:1fr}.trade-event-row{grid-template-columns:1fr 1fr}.trade-event-row>div{grid-column:1/-1}.poster-checks{grid-template-columns:1fr 1fr}}

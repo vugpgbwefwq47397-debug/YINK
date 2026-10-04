@@ -1,0 +1,29 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Frontend, editor and resource checks
+        run: |
+          for test in core data editor ui-flow i18n hosted mobile admin-ui package; do
+            node "tests/$test.test.js"
+          done
+      - name: Backend checks
+        run: python -B tests/backend.test.py
