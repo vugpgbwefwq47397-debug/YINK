@@ -1,0 +1,66 @@
+name: Release v1.0.0
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/release.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: yink-release-v1.0.0
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify frontend and backend
+        run: |
+          for test in core data editor ui-flow i18n hosted mobile admin-ui package; do
+            node "tests/$test.test.js"
+          done
+          python -B tests/backend.test.py
+      - name: Build and verify offline package
+        shell: pwsh
+        run: ./tools/build-offline.ps1
+      - name: Build source archive and checksums
+        run: |
+          git archive --format=zip --prefix=YINK/ --output=dist/YINK-v1.0.0-source.zip HEAD
+          cd dist
+          sha256sum YINK-offline.zip YINK-v1.0.0-source.zip > SHA256SUMS.txt
+      - name: Publish release with bilingual notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_COMMIT: ${{ github.sha }}
+        run: |
+          tag=v1.0.0
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo 'v1.0.0 already exists; its assets will not be overwritten.'
+            exit 1
+          fi
+          gh release create "$tag" \
+            dist/YINK-offline.zip \
+            dist/YINK-v1.0.0-source.zip \
+            dist/SHA256SUMS.txt \
+            --target "$RELEASE_COMMIT" \
+            --title '盈刻 YINK v1.0.0 · Turn market history into art' \
+            --notes-file docs/RELEASE-v1.0.0.md \
+            --draft
+          test "$(gh release view "$tag" --json assets --jq '.assets | length')" = 3
+          gh release edit "$tag" --draft=false --latest
